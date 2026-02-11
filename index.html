@@ -1,0 +1,164 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Angel ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #ff4e50, #ff758c, #ff7eb3, #ff4e50);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: white;
+    text-align: center;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navigation */
+nav {
+    padding: 20px;
+}
+
+nav button {
+    background: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    background: #ffe6f0;
+}
+
+/* Sections */
+.section {
+    display: none;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+/* Heart */
+.heart {
+    width: 120px;
+    height: 120px;
+    background: #ff1a66;
+    margin: 20px auto;
+    position: relative;
+    transform: rotate(-45deg);
+    animation: pulse 1.5s infinite;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: #ff1a66;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -60px;
+    left: 0;
+}
+
+.heart:after {
+    left: 60px;
+    top: 0;
+}
+
+@keyframes pulse {
+    0% { transform: rotate(-45deg) scale(1); }
+    50% { transform: rotate(-45deg) scale(1.1); }
+    100% { transform: rotate(-45deg) scale(1); }
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('letter')">Love Letter</button>
+    <button onclick="showSection('surprise')">Surprise</button>
+</nav>
+
+<div id="home" class="section">
+    <h1>My Beautiful Angel ❤️</h1>
+    <div class="heart"></div>
+    <p>You are the best thing that ever happened to me.</p>
+</div>
+
+<div id="letter" class="section">
+    <h2>Love Letter 💌</h2>
+    <p>Dear Angel,</p>
+    <p>
+        Even if we are far apart, my heart belongs to you.
+        Your smile makes my world brighter.
+        I promise to always give my best for you.
+    </p>
+    <p>Happy Valentine's Day 🥰</p>
+</div>
+
+<div id="surprise" class="section">
+    <h2>Forever & Always ❤️</h2>
+    <p>No distance can break what we have.</p>
+</div>
+
+<footer>
+    Made with ❤️ by Andre
+</footer>
+
+<script>
+function showSection(id) {
+    var sections = document.querySelectorAll(".section");
+    sections.forEach(section => section.style.display = "none");
+    document.getElementById(id).style.display = "block";
+}
+
+showSection("home");
+</script>
+
+</body>
+</html>
